@@ -1,0 +1,43 @@
+.izvelne a{
+    float: right;
+    margin:9px;
+    padding:14px 16px;
+    color:white;
+    font-size:17px;
+}
+.izvelne{
+    background-color:black;
+    overflow: hidden;
+    margin-bottom:40px;
+}
+
+.izvelne a:hover{
+    background-color:rgb(113, 202, 230); 
+}
+
+.lielabilde {
+    text-align:center;
+}
+
+.pirma {
+    display:inline-block;
+    margin-left:143px;
+    margin-top:40px;
+    margin-right:22px;
+    width:290px;
+}
+.otra{
+    display:inline-block;
+    margin-left:22px;
+    margin-top:40px;
+    margin-right:22px;
+    width:285px;
+}
+.tresa {
+    display:inline-block;
+    margin-left:22px;
+    margin-top:40px;
+    margin-right:143px;
+    width:285px;
+    
+}
