@@ -1,43 +1,97 @@
-.izvelne a{
-    float: right;
-    margin:9px;
-    padding:14px 16px;
-    color:white;
-    font-size:17px;
-}
-.izvelne{
-    background-color:black;
-    overflow: hidden;
-    margin-bottom:40px;
+/*
+  Uzliekam box-sizing visiem elementiem uz border-box
+  lai vieglak saprast elementu platumu
+  https://css-tricks.com/box-sizing/
+*/
+html {
+  box-sizing: border-box;
 }
 
-.izvelne a:hover{
-    background-color:rgb(113, 202, 230); 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
+/*
+  Nonemam no body margin, lai nav lieka
+  atstarpe no ekrana malas lidz musu lapai
+*/
+body {
+  margin: 0;
+}
+
+/*
+  uzliekam visas bildes lai aiznem 100% no to konteinera/parent platuma
+*/
+img {
+  width: 100%;
+}
+
+.izvelne a {
+  float: right;
+  margin: 9px;
+  padding: 14px 16px;
+  color: white;
+  font-size: 17px;
+}
+
+.izvelne {
+  background-color: black;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.izvelne a:hover {
+  background-color: rgb(113, 202, 230);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*
+  Saja gadijuma text-align: center; nekadu efektu nedos
+  seit savukar mes noradam margin: 0 5px; lai bildi izlidzinatu ar
+  mazajam kas apaksa
+*/
 .lielabilde {
-    text-align:center;
+  margin: 0 5px;
 }
 
-.pirma {
-    display:inline-block;
-    margin-left:143px;
-    margin-top:40px;
-    margin-right:22px;
-    width:290px;
+/*
+  Hacks lai izvairitos no nevelamam atstarpem starp inline-block elementiem.
+  Uzliekam konteinerim kas satur musu tris mazos article blokus, font-size: 0
+  un pec tam katram blokam atseviski uzliekam sakotnejo fonta izmeru izmantojot
+  font-size: initial
+  https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+*/
+.mazas-bildes {
+  font-size: 0;
 }
-.otra{
-    display:inline-block;
-    margin-left:22px;
-    margin-top:40px;
-    margin-right:22px;
-    width:285px;
-}
+
+/*
+  Sada veida rakstot margin-left noteiktu pikselu skaitu
+  lapa bus skatama uz viena noteikta ekrana izmera,
+  tacu tiklidz ka izmers mainisies ta lapa sabruks
+  tapec ieteicams izmantot procentus vai citas automatiskas
+  vertibas kas automatiski iecentre saturu un automatiski
+  pielagojas ekrana izmeram.
+
+  Saja gadijuma, ieteikums ir ielikt visu viena konteineri
+  kuram uzliekam max-width teiksim 960px un margin: 0 auto;
+  kas iecentres visu.
+
+  ka ari vinemar censamies noradot izmerus izmantot relativas vienibas
+  ka procenti, lai kad mainas ekrana platums mums lapa saglaba savu izskatu
+  un nesabruk
+*/
+.pirma,
+.otra,
 .tresa {
-    display:inline-block;
-    margin-left:22px;
-    margin-top:40px;
-    margin-right:143px;
-    width:285px;
-    
+  display: inline-block;
+  font-size: initial;
+  width: 33.33%;
+  padding: 5px;
 }
